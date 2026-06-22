@@ -1,0 +1,248 @@
+ <title> hamza's project </title>
+
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mohd Hamza Khan — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="port.css"/>
+</head>
+<body>
+
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+  <canvas id="bg-canvas"></canvas>
+
+  <nav>
+    <a class="nav-logo" href="#hero">MHK<span>.</span>DEV</a>
+    <ul class="nav-links">
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-inner">
+
+        <div class="hero-text">
+          <div class="hero-label">Available for work</div>
+          <h1 class="hero-name">
+            <span class="glitch" data-text="Mohd Hamza">Mohd Hamza</span><br/>
+            <span class="hero-name-accent">Khan</span>
+          </h1>
+          <p class="hero-role">Full-Stack <em>Developer</em> — fast, clean, scalable.</p>
+          <p class="hero-desc">I craft digital experiences using HTML, CSS, JavaScript on the front-end and Java &amp; Python on the back-end. Every pixel is intentional.</p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">View Work →</a>
+            <a href="#contact"  class="btn btn-ghost">Get In Touch</a>
+          </div>
+        </div>
+
+        <div class="hero-photo-wrap">
+          <div class="photo-deco-ring"></div>
+          <div class="photo-o-corner tl"></div>
+          <div class="photo-deco-corner dectr"></div>
+          <div class="photo-deco-corner bl"></div>
+          <div class="photo-deco-corner br"></div>
+          <div class="photo-frame" id="photoFrame"
+               onclick="document.getElementById('pfpInput').click()">
+            <img id="pfpImg" src="" alt="Mohd Hamza Khan" style="display:none"/>
+            <div class="photo-placeholder" id="photoPlaceholder">
+              <div class="ph-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                  <circle cx="12" cy="8" r="4"/>
+                  <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+                </svg>
+              </div>
+              <div class="ph-label">Click to upload photo</div>
+              <div class="ph-sub">JPG, PNG, WEBP</div>
+            </div>
+            <div class="photo-hover-overlay">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                <polyline points="17 8 12 3 7 8"/>
+                <line x1="12" y1="3" x2="12" y2="15"/>
+              </svg>
+              
+            </div>
+          </div>
+          <input type="file" id="pfpInput" accept="image/*" style="display:none"/>
+          <div class="photo-name-tag">
+            <span class="pnt-dot"></span> Mohd Hamza Khan
+          </div>
+          <div class="photo-scan-line"></div>
+        </div>
+
+      </div>
+      <div class="hero-scroll-hint">
+        <span class="scroll-line"></span> scroll to explore
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="section-tag reveal">Capabilities</div>
+      <h2 class="section-title reveal">My <span class="accent-lime">Skill</span> Stack</h2>
+      <div class="skills-grid">
+        <div class="skill-card reveal" style="--glow:var(--pink)">
+          <span class="skill-icon">🌐</span>
+          <div class="skill-name">HTML5</div>
+          <div class="skill-desc">Semantic markup, accessibility, SEO-optimised structure and modern APIs.</div>
+          <div class="skill-bar"><div class="skill-fill" style="--bar-color:var(--pink)"></div></div>
+        </div>
+        <div class="skill-card reveal" style="--glow:var(--cyan)">
+          <span class="skill-icon">🎨</span>
+          <div class="skill-name">CSS3</div>
+          <div class="skill-desc">Animations, Grid, Flexbox, custom properties, responsive design at any scale.</div>
+          <div class="skill-bar"><div class="skill-fill" style="--bar-color:var(--cyan)"></div></div>
+        </div>
+        <div class="skill-card reveal" style="--glow:var(--lime)">
+          <span class="skill-icon">⚡</span>
+          <div class="skill-name">JavaScript</div>
+          <div class="skill-desc">ES2024+, async patterns, DOM mastery, browser APIs, Node.js and frameworks.</div>
+          <div class="skill-bar"><div class="skill-fill" style="--bar-color:var(--lime)"></div></div>
+        </div>
+        <div class="skill-card reveal" style="--glow:var(--pink)">
+          <span class="skill-icon">☕</span>
+          <div class="skill-name">Java</div>
+          <div class="skill-desc">OOP, Spring Boot, JVM internals, data structures, enterprise-grade back-end.</div>
+          <div class="skill-bar"><div class="skill-fill" style="--bar-color:var(--pink)"></div></div>
+        </div>
+        <div class="skill-card reveal" style="--glow:var(--cyan)">
+          <span class="skill-icon">🐍</span>
+          <div class="skill-name">Python</div>
+          <div class="skill-desc">Django, FastAPI, data science, scripting, automation and AI integrations.</div>
+          <div class="skill-bar"><div class="skill-fill" style="--bar-color:var(--cyan)"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="section-tag reveal">Selected Work</div>
+      <h2 class="section-title reveal">Projects That <span class="accent-pink">Ship</span></h2>
+      <div class="projects-grid">
+        <article class="proj-card reveal">
+          <div class="proj-img">
+            <div class="proj-bg">NeX</div>
+            <div class="proj-overlay"></div>
+            <div class="proj-num">01 / 04</div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags"><span class="tag">JavaScript</span><span class="tag lime">CSS</span></div>
+            <h3 class="proj-title">NeXui Design System</h3>
+            <p class="proj-desc">A themeable component library built from scratch — dark/light modes, motion presets, and zero dependencies.</p>
+            <a href="#" class="proj-link">View Project →</a>
+          </div>
+        </article>
+        <article class="proj-card reveal">
+          <div class="proj-img proj-img--pink">
+            <div class="proj-bg proj-bg--pink">API</div>
+            <div class="proj-overlay proj-overlay--pink"></div>
+            <div class="proj-num">02 / 04</div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags"><span class="tag pink">Java</span><span class="tag pink">Spring</span></div>
+            <h3 class="proj-title">RestCore API Gateway</h3>
+            <p class="proj-desc">High-throughput REST gateway in Spring Boot handling 50k req/s with JWT auth, rate-limiting and caching layers.</p>
+            <a href="#" class="proj-link">View Project →</a>
+          </div>
+        </article>
+        <article class="proj-card reveal">
+          <div class="proj-img proj-img--lime">
+            <div class="proj-bg proj-bg--lime">PyML</div>
+            <div class="proj-overlay proj-overlay--lime"></div>
+            <div class="proj-num">03 / 04</div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags"><span class="tag lime">Python</span><span class="tag lime">ML</span></div>
+            <h3 class="proj-title">SentimentIQ</h3>
+            <p class="proj-desc">Real-time sentiment analysis pipeline using FastAPI + scikit-learn with a live dashboard front-end.</p>
+            <a href="#" class="proj-link">View Project →</a>
+          </div>
+        </article>
+        <article class="proj-card reveal">
+          <div class="proj-img">
+            <div class="proj-bg">WEB</div>
+            <div class="proj-overlay"></div>
+            <div class="proj-num">04 / 04</div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag lime">JS</span></div>
+            <h3 class="proj-title">Void Portfolio Template</h3>
+            <p class="proj-desc">Open-source dark portfolio starter with glitch effects, canvas animations, and a11y built in from day one.</p>
+            <script src="port.js"></script>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <div class="about-text">
+  <div class="section-tag reveal">About Me</div>
+  <h2 class="section-title reveal" style="margin-bottom: 1.5rem;">
+    Building with code,<br/><span class="accent-cyan">driven by data.</span>
+  </h2>
+  
+  <p class="reveal">
+    I am a B.Tech student based in Delhi. Right now, I am focusing on building my hands-on practice with <strong>full-stack web development</strong> while diving deeper into my main interest: <strong>Data Science</strong>.
+  </p>
+  
+  <p class="reveal">
+    My goal is to keep learning new tech skills every day. Currently, I am working on building more practical coding projects and exploring the fundamentals of <strong>Cloud Computing</strong> to understand how applications run at scale.
+  </p>
+  
+  <p class="reveal">
+    When I am not working on software projects or writing code, you will find me practicing tactical chess puzzles to sharpen my mind, competing in games like Valorant, or working out at the gym.
+  </p>
+  
+  <div class="stats-row reveal">
+    <div class="stat">
+      <div class="stat-num">B.Tech</div>
+      <div class="stat-label">Education</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">HTML/JS</div>
+      <div class="stat-label">Front-End</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">Data</div>
+      <div class="stat-label">Focus Area</div>
+    </div>
+  </div>
+</div>
+
+    <!-- CONTACT -->
+    <section id="contact">
+  <div class="section-tag">Contact</div>
+  <div class="contact-big">Let's Build<br/>Something.</div>
+  <p class="contact-sub">Have an idea, a project, or just want to chat about code? My inbox is always open.</p>
+  
+  <a href="mailto:your.email@example.com" class="btn btn-primary">gaminguser558@example.com</a>
+  
+  <div class="social-row">
+    <a href="https://github.com/" class="social-link" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/" class="social-link" target="_blank">LinkedIn</a>
+    
+  </div>
+</section>
+
+  </main>
+
+  <footer>
+    <span>  2025 — Mohd Hamza Khan  </span>
+    <span> Thank you
+    </span>
+    <span class="footer-right">Designed &amp; built with precision</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
