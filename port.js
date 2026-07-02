@@ -136,37 +136,31 @@
 
 
 /* ══ 5. ACTIVE NAV HIGHLIGHT ══ */
+
 (function initActiveNav() {
   const navLinks = document.querySelectorAll('.nav-links a');
   const sections = document.querySelectorAll('section[id]');
 
-  window.addEventListener('scroll', () => {
+  function updateNav() {
     let currentId = '';
-    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 200) currentId = s.id; });
-    navLinks.forEach(link => {
-      link.style.color = link.getAttribute('href') === '#' + currentId ? 'var(--cyan)' : '';
+
+    sections.forEach(s => {
+      // getBoundingClientRect is live — no offset math needed
+      const top = s.getBoundingClientRect().top;
+      // Section is "active" the moment its top passes 60% up the screen
+      if (top <= window.innerHeight * 0.6) {
+        currentId = s.id;
+      }
     });
-  });
-})();
 
+    navLinks.forEach(link => {
+      const isActive = link.getAttribute('href') === '#' + currentId;
+      link.style.color      = isActive ? 'var(--cyan)' : '';
+      link.style.fontWeight = isActive ? '700'         : '';
+    });
+  }
 
-/* ══ 6. PHOTO UPLOAD ══ */
-(function initPhotoUpload() {
-  const input       = document.getElementById('pfpInput');
-  const img         = document.getElementById('pfpImg');
-  const placeholder = document.getElementById('photoPlaceholder');
-  if (!input || !img || !placeholder) return;
-
-  input.addEventListener('change', (e) => {
-    const file = e.target.files[0];
-    if (!file || !file.type.startsWith('image/')) return;
-
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      img.src = event.target.result;
-      img.style.display = 'block';
-      placeholder.style.display = 'none';
-    };
-    reader.readAsDataURL(file);
-  });
+  // Run on scroll AND on page load
+  window.addEventListener('scroll', updateNav);
+  window.addEventListener('load',   updateNav);
 })();
