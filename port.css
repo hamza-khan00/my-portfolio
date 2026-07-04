@@ -224,7 +224,9 @@ nav {
 
 /* ══ 10. ABOUT ══ */
 
-about {
+/* ══ 10. ABOUT ══ */
+
+#about { /* FIXED: Added '#' so the browser recognizes the section ID */
   min-height: 100vh;
   padding: 6rem 8vw;
   background: var(--surface);
@@ -234,30 +236,78 @@ about {
   gap: 6rem;
 }
  
-/* Left column — decorative code block */
-.about-visual { position: relative; height: 420px; min-width: 0; }
+/* Left column — The main code block container */
+.about-visual { 
+  position: relative; 
+  height: 400px; 
+  min-width: 0; 
+}
  
-.ab1 { position: absolute; inset: 0 60px 60px 0; background: var(--card); border: 1px solid rgba(0,255,231,.1); }
-.ab2 { position: absolute; width: 180px; height: 180px; bottom: 0; right: 0; background: rgba(255,45,120,.07); border: 1px solid rgba(255,45,120,.2); display: flex; align-items: center; justify-content: center; font-family: var(--font-head); font-weight: 800; font-size: 3.5rem; color: var(--pink); }
-.ab3 { position: absolute; width: 120px; height: 120px; top: -24px; left: -24px; border: 1px solid rgba(184,255,58,.15); background: rgba(184,255,58,.03); }
+/* The inner card: Changed to absolute fill with a modern glass border */
+.ab1 { 
+  position: absolute; 
+  inset: 0; /* Keeps it full size inside the column layout */
+  background: var(--card); 
+  border: 1px solid rgba(0, 255, 231, 0.15); 
+  border-radius: 8px;
+}
 
+/* The pink curly braces box: Locked perfectly to the bottom-right corner */
+.ab2 { 
+  position: absolute; 
+  width: 140px; 
+  height: 140px; 
+  bottom: 0; 
+  right: 0; 
+  background: rgba(255, 45, 120, 0.07); 
+  border-left: 1px solid rgba(255, 45, 120, 0.15); 
+  border-top: 1px solid rgba(255, 45, 120, 0.15); 
+  border-bottom-right-radius: 8px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-family: var(--font-head); 
+  font-weight: 800; 
+  font-size: 3rem; 
+  color: var(--pink); 
+}
 
-/* Syntax colours inside the code block */
-.code-snippet { position: absolute; bottom: 1.5rem; left: 1.5rem; right: 4rem; font-size: .68rem; color: #4a4a70; line-height: 1.8; }
+/* The lime outline box: Frame the top-left corner neatly */
+.ab3 { 
+  position: absolute; 
+  width: 80px; 
+  height: 80px; 
+  top: -12px; 
+  left: -12px; 
+  border: 1px solid rgba(184, 255, 58, 0.25); 
+  background: rgba(184, 255, 58, 0.03); 
+  border-radius: 4px;
+}
+
+/* FIXED: Merged into a single clean rule to remove conflicts */
+.code-snippet { 
+  position: absolute; 
+  top: 2.5rem;       /* Pulls text up safely inside the card box */
+  left: 2.5rem; 
+  right: 11rem;      /* Prevents code text from hitting the pink box */
+  font-size: .85rem; 
+  color: #4a4a70; 
+  line-height: 1.8; 
+}
+
 .cs-k { color: #ff2d78; }   /* keyword  */
 .cs-f { color: #00ffe7; }   /* function */
 .cs-s { color: #b8ff3a; }   /* string   */
 .cs-c { color: #4a4a70; }   /* comment  */
  
-/* Right column — text */
+/* Right column — text 
 .about-text { min-width: 0; display: flex; flex-direction: column; }
 .about-text p { font-size: .88rem; color: #7070a0; line-height: 1.9; margin-bottom: 1.2rem; }
 .about-text p strong { color: var(--white); font-weight: 400; }
  
 .stats-row  { display: flex; gap: 2.5rem; margin-top: 2.2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.05); }
 .stat-num   { font-family: var(--font-head); font-weight: 800; font-size: 2.2rem; color: var(--cyan); line-height: 1; letter-spacing: -.03em; }
-.stat-label { font-size: .68rem; letter-spacing: .15em; text-transform: uppercase; color: var(--muted); margin-top: .3rem; }
- 
+.stat-label { font-size: .68rem; letter-spacing: .15em; text-transform: uppercase; color: var(--muted); margin-top: .3rem; }*/
 
 /* ══ 11. CONTACT ══ */
 
