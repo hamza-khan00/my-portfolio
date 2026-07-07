@@ -223,7 +223,51 @@ nav {
 .proj-link:hover { gap: .8rem; }
 
 /* ══ 10. ABOUT ══ */
+ 
+#about { background: var(--surface); display: flex; ; align-items: center; gap: 4rem; }
+.about-visual { position: relative; height: 420px; width: 100%;  max-width: 500%; margin: 0 auto;}
+.ab1 { position: absolute; inset: 0 ; background: var(--card); border: 1px solid rgba(0,255,231,.1); border-radius: 8px; }
+.ab2 { position: absolute; width: 120px; height: 120px; bottom: 0; right: 0; background: rgba(255,45,120,.07); border-left: 1px solid rgba(255,45,120,.2); border-top:  1px solid rgba(255,45,120,.2) ; display: flex; align-items: center; justify-content: center; font-family: var(--font-head); font-weight: 800; font-size: 2.5rem; color: var(--pink); }
+.ab3 { position: absolute; width: 60px; height: 60px; top: -10px; left: -10px; border: 1px solid rgba(184,255,58,.15); background: rgba(184,255,58,.03); border-radius: 4px; }
+.code-snippet { position: absolute; top: 2rem; left: 2rem; right: 9rem; font-size: .85rem; color: #4a4a70; line-height: 1.8; }
+.cs-k { color: #ff2d78; } .cs-f { color: #00ffe7; } .cs-s { color: #b8ff3a; } .cs-c { color: #4a4a70; }
+.about-text { 
+  width: 100%; 
+  max-width: 900px;            /* Keeps sentences readable on big desktop monitors */
+  display: flex; 
+  flex-direction: column; 
+}
 
+.about-text p { 
+  font-size: .95rem;           /* Slightly optimized for a wider reading area */
+  color: #7070a0; 
+  line-height: 1.9; 
+  margin-bottom: 1.5rem; 
+}
+
+.about-text p strong { 
+  color: var(--white); 
+  font-weight: 400; 
+}
+.stats-row { display: flex; gap: 2rem; margin-top: 2.5rem; padding-top: 2.5rem; border-top: 1px solid rgba(255,255,255,.05); justify-content: space-between; }
+.stat-num { font-family: var(--font-head); font-weight: 800; font-size: 2.5rem; color: var(--cyan); line-height: 1; letter-spacing: -.03em; }
+.stat-label { font-size: .72rem; letter-spacing: .15em; text-transform: uppercase; color: var(--muted); margin-top: .4rem; }
+   
+
+ /* for mobile */
+  @media (max-width: 768px) {
+  #about { 
+    padding: 5rem 6vw; 
+    gap: 2.5rem; 
+  }
+  .about-visual { 
+    height: 240px; 
+  }
+  .stats-row { 
+    flex-direction: column;    /* Stacks stats vertically on smaller mobile displays */
+    gap: 1.5rem;
+  }
+}
 
 
 /* ══ 11. CONTACT ══ */
